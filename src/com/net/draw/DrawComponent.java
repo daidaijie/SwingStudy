@@ -24,6 +24,8 @@ public class DrawComponent extends JComponent {
         double width = 200;
         double height = 150;
         Rectangle2D rect = new Rectangle2D.Double(leftX, topY, width, height);
+        g2.setPaint(Color.RED);
+        //g2.fill(rect);
         g2.draw(rect);
 
         //draw the enclosed ellipse

@@ -14,7 +14,10 @@ public class DrawFrame extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
-        add(new DrawComponent());
+        DrawComponent drawComponent = new DrawComponent();
+        drawComponent.setBackground(SystemColor.window);
+
+        add(drawComponent);
         pack();
     }
 }
