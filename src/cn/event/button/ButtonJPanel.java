@@ -11,6 +11,15 @@ import java.awt.event.ActionListener;
 public class ButtonJPanel extends JPanel {
 
     public ButtonJPanel() {
+        //切换观感
+        String plaf = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+        try {
+            UIManager.setLookAndFeel(plaf);
+            SwingUtilities.updateComponentTreeUI(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         JButton redButton = new JButton("RED");
         JButton blueButton = new JButton("Blue");
         JButton greenButton = new JButton("Green");
